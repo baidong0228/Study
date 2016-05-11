@@ -7,9 +7,10 @@
     <artifactId>app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.bdong</groupId>
+  
   <artifactId>app-domain</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  
   <name>app-domain</name>
   <url>http://maven.apache.org</url>
   <properties>
