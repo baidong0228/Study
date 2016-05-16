@@ -19,7 +19,7 @@
   </properties>
   
   <dependencies>
-  	<!--依赖system-domain模块-->
+  	<!--依赖app-domain模块-->
   	<dependency>
 		<groupId>com.bdong</groupId>
 		<artifactId>app-domain</artifactId>
