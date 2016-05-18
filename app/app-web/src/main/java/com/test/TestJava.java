@@ -7,22 +7,22 @@ package com.test;
  * and shall use it only in accordance with the terms of the agreements   
  * you entered into with Founder.   
  *   
- */     
-    
-/**   
- * This class is used for ...   
- * @author Bdong  
- * @version   
- *       1.0, 2016年5月3日 下午3:28:36   
- */ 
+ */
+
+/**
+ * This class is used for ...
+ *
+ * @author Bdong
+ * @version 1.0, 2016年5月3日 下午3:28:36
+ */
 class TestJava {
-	public static void main(String[] args){
-		int i=0;
-		System.out.println(i++);
-		
-		int j=0;
-		j++;
-		System.out.println(j);
-	}
+    public static void main(String[] args) {
+        int i = 0;
+        System.out.println(i++);
+
+        int j = 0;
+        j++;
+        System.out.println(j);
+    }
 }
   

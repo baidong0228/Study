@@ -19,14 +19,13 @@ public class SayHelloTest {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
         try {
-            // 换成对应的proxy类
+            // 实例化proxy类
             SayHelloServiceProxy proxy = new SayHelloServiceProxy();
+            //设置服务地址
             proxy.setEndpoint("http://localhost:9001/Service/SayHelloService");
-            // 换成获取对应的serice
-            SayHelloService service = proxy.getSayHelloService();
-            // 调用web service提供的方法
-            String result = service.getValue("bdong");
-
+            // 调用接口
+            String result=proxy.getValue("bdong");
+//
             System.out.println(result);
 
         } catch (RemoteException e) {
