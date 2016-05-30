@@ -1,4 +1,3 @@
-package com.bdong;
 /*   
  * Copyright (c) 2016-2026 Founder Bdong. All Rights Reserved.   
  *   
@@ -8,21 +7,15 @@ package com.bdong;
  * you entered into with Founder.   
  *   
  */
+package org.app.base.common;
 
 /**
- * This class is used for ...
- *
- * @author Bdong
- * @version 1.0, 2016年5月3日 下午3:28:36
+ * 打印java.library.path
  */
-class TestJava {
+public class JavaLibPath {
     public static void main(String[] args) {
-        int i = 0;
-        System.out.println(i++);
-
-        int j = 0;
-        j++;
-        System.out.println(j);
+        System.out.println(System.getProperty("java.library.path"));
     }
 }
+
   

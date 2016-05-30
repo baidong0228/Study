@@ -17,14 +17,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
-	<!-- log start -->
-	<!-- http://mvnrepository.com/artifact/log4j/log4j -->
-	<dependency>
-		<groupId>log4j</groupId>
-		<artifactId>log4j</artifactId>
-		<version>1.2.17</version>
-	</dependency>
-	<!-- log end -->
 	<!--单元测试 start -->
 	<dependency>
 		<groupId>junit</groupId>
@@ -32,6 +24,12 @@
 		<version>4.11</version>
 		<!-- 表示开发的时候引入，发布的时候不会加载此包 -->
 		<scope>test</scope>
+	</dependency>
+	<!-- http://mvnrepository.com/artifact/org.chiknrice/concordion-spring-runner -->
+	<dependency>
+	    <groupId>org.chiknrice</groupId>
+	    <artifactId>concordion-spring-runner</artifactId>
+	    <version>0.0.1</version>
 	</dependency>
 	<!--单元测试 end -->
   </dependencies>
