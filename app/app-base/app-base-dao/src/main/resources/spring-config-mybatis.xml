@@ -8,7 +8,7 @@
      		http://www.springframework.org/schema/context/spring-context.xsd"
        default-autowire="byName">
 
-    <!--自动扫描-->
+    <!--spring自动扫描-->
     <context:component-scan base-package="org.app"/>
     <!-- 引入配置文件 -->
     <bean id="propertyConfigurer"
@@ -16,6 +16,7 @@
         <property name="location" value="classpath:jdbc.properties" />
     </bean>
 
+	<!-- dbcp数据源 -->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close">
         <property name="driverClassName" value="${driver}" />
@@ -37,20 +38,9 @@
    <!-- 	 spring和MyBatis整合，不需要mybatis的配置映射文件   -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">  
         <property name="dataSource" ref="dataSource" />  
-        <property name="mapperLocations" value="classpath:mapping/*.xml" />
-        <!-- <property name="configLocation" value="classpath:mybatis-config-sqlmap.xml"></property>  --> 
+        <!-- <property name="mapperLocations" value="classpath:mapping/*.xml" /> -->
+        <property name="configLocation" value="classpath:mybatis-config-sqlmap.xml"></property>
     </bean> 
-
-   <!-- DAO接口所在包名，Spring会自动查找其下的类   -->
-   <!--  <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">  
-        <property name="basePackage" value="org.app.base.dao" />  
-        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>  
-    </bean> -->   
-    
-   	<bean id="personDao" class="org.mybatis.spring.mapper.MapperFactoryBean">  
-    	<property name="mapperInterface" value="org.app.base.dao.IPersonDao"></property>  
-    	<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>  
-	</bean>
 
     <!-- (事务管理)transaction manager, use JtaTransactionManager for global tx -->
     <bean id="transactionManager"
@@ -58,4 +48,16 @@
         <property name="dataSource" ref="dataSource" />
     </bean>
 
+	<!-- DAO接口所在包名，Spring会自动查找其下的类，无需实现类，暂时不使用，有BUG   -->
+   	<!--  <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">  
+        <property name="basePackage" value="org.app.base.dao" />  
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>  
+    </bean> --> 
+    
+	<!-- MapperFactoryBean方式，无需DAO实现类 -->
+   	<bean id="personDao" class="org.mybatis.spring.mapper.MapperFactoryBean">  
+    	<property name="mapperInterface" value="org.app.base.dao.IPersonDao"></property>  
+    	<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>  
+	</bean>
+	
 </beans>

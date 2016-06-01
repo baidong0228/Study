@@ -7,28 +7,28 @@
     <artifactId>app-management</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-
   <artifactId>app-management-web</artifactId>
-
   <packaging>war</packaging>
   <name>app-management-web Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
-	<!-- servlet -->
+    <!-- servlet -->
 	<!-- http://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 	<dependency>
 		<groupId>javax.servlet</groupId>
 		<artifactId>javax.servlet-api</artifactId>
 		<version>3.1.0</version>
 	</dependency>
-	<!-- log start -->
-	<!-- http://mvnrepository.com/artifact/log4j/log4j -->
+	
+	<!-- Spring start -->
+	<!-- http://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
 	<dependency>
-		<groupId>log4j</groupId>
-		<artifactId>log4j</artifactId>
-		<version>1.2.17</version>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-webmvc</artifactId>
+	    <version>4.1.6.RELEASE</version>
 	</dependency>
-	<!-- log end -->
+	
+	<!-- Spring end -->
   </dependencies>
   <build>
     <finalName>app-management-web</finalName>

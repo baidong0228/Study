@@ -9,8 +9,8 @@
  */     
 package org.app.base.service;    
 
-import java.util.logging.Logger;
 
+import org.apache.log4j.Logger;
 import org.app.base.domain.Person;
 import org.junit.Before;
 import org.junit.Test;
