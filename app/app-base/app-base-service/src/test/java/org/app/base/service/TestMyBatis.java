@@ -32,17 +32,17 @@ public class TestMyBatis {
 	private static Logger logger = Logger.getLogger("TestMyBatis");
 	private ApplicationContext ac = null;
 	@Autowired
-	private IPersonService personService;
+	private IPersonServiceTest personServiceTest;
 
 	@Before
 	public void before() {
 		ac = new ClassPathXmlApplicationContext("spring-config-mybatis.xml");
-		personService = (IPersonService) ac.getBean("personService");
+		personServiceTest = (IPersonServiceTest) ac.getBean("personServiceTest");
 	}
 
 	@Test
 	public void test() {
-		Person person = personService.selectByPrimaryKey(1);
+		Person person = personServiceTest.selectByPrimaryKey(1);
 		logger.info("Name:" + person.getName());
 	}
 }

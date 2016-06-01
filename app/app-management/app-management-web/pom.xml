@@ -12,13 +12,20 @@
   <name>app-management-web Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+  	<dependency>
+		<groupId>com.bdong</groupId>
+		<artifactId>app-management-service</artifactId>
+		<version>${project.version}</version>
+	</dependency>
+	
     <!-- servlet -->
 	<!-- http://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 	<dependency>
-		<groupId>javax.servlet</groupId>
-		<artifactId>javax.servlet-api</artifactId>
-		<version>3.1.0</version>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>javax.servlet-api</artifactId>
+	    <version>3.1.0</version>
 	</dependency>
+
 	
 	<!-- Spring start -->
 	<!-- http://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
@@ -27,6 +34,7 @@
 	    <artifactId>spring-webmvc</artifactId>
 	    <version>4.1.6.RELEASE</version>
 	</dependency>
+  
 	
 	<!-- Spring end -->
   </dependencies>

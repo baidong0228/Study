@@ -7,7 +7,7 @@
  * you entered into with Founder.   
  *   
  */     
-package org.app.base.service;    
+package org.app.management.service;    
 
 import org.app.base.domain.Person;
     
