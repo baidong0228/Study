@@ -12,13 +12,21 @@ package org.app.base.common.excel;
 import java.util.Date;
     
 public class AdultVideoStar {
+	//中文名
 	private String chineseName;
+	//英文名
 	private String englishName;
+	//出生日期
 	private Date birthday;
+	//身高
 	private int height;
+	//三围
 	private String measurements;
+	//罩杯
 	private String cup;
+	//马赛克
 	private String mosaic;
+	
 	public String getChineseName() {
 		return chineseName;
 	}

@@ -18,7 +18,7 @@ import org.app.base.domain.Person;
  * @version   
  *       1.0, 2016年5月26日 下午5:43:21
  */
-public interface IPersonServiceTest {
+public interface IPersonService {
 	public Person selectByPrimaryKey(Integer id);  
 }
   

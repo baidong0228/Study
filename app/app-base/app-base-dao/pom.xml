@@ -24,11 +24,6 @@
 		<artifactId>app-base-domain</artifactId>
 		<version>${project.version}</version>
 	</dependency>
-	<dependency>
-		<groupId>com.bdong</groupId>
-		<artifactId>app-base-common</artifactId>
-		<version>${project.version}</version>
-	</dependency>
 
 	<!-- mybatis start -->
 	<!-- http://mvnrepository.com/artifact/org.mybatis/mybatis -->

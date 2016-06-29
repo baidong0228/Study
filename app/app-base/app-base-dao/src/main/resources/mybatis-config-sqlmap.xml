@@ -21,5 +21,6 @@
     <!-- 映射文件路径 -->
     <mappers> 
         <mapper resource="mapping/PersonMapper.xml" /> 
+        <mapper resource="mapping/AdultVideoStarMapper.xml" /> 
     </mappers> 
 </configuration>

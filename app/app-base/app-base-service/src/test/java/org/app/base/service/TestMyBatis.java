@@ -11,7 +11,7 @@ package org.app.base.service;
 
 
 import org.apache.log4j.Logger;
-import org.app.base.domain.Person;
+import org.app.base.domain.AdultVideoStar;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,18 +32,24 @@ public class TestMyBatis {
 	private static Logger logger = Logger.getLogger("TestMyBatis");
 	private ApplicationContext ac = null;
 	@Autowired
-	private IPersonServiceTest personServiceTest;
+	private IAdultVideoStarService avStarService;
 
 	@Before
 	public void before() {
 		ac = new ClassPathXmlApplicationContext("spring-config-mybatis.xml");
-		personServiceTest = (IPersonServiceTest) ac.getBean("personServiceTest");
+		avStarService = (IAdultVideoStarService) ac.getBean("avStarService");
 	}
 
 	@Test
 	public void test() {
-		Person person = personServiceTest.selectByPrimaryKey(1);
-		logger.info("Name:" + person.getName());
+		AdultVideoStar avStar = avStarService.selectByPrimaryKey(1);
+		logger.info("ChineseName:" + avStar.getChinesename());
+		logger.info("EnglishName:" + avStar.getEnglishname());
+		logger.info("Birthday:" + avStar.getBirthday());
+		logger.info("Height:" + avStar.getHeight());
+		logger.info("Measurements:" + avStar.getMeasurements());
+		logger.info("Cup:" + avStar.getCup());
+		logger.info("Mosaic:" + avStar.getMosaic());
 	}
 }
   

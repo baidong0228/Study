@@ -11,12 +11,12 @@ package org.app.base.service.imp;
 
 import org.app.base.dao.IPersonDao;
 import org.app.base.domain.Person;
-import org.app.base.service.IPersonServiceTest;
+import org.app.base.service.IPersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service("personServiceTest")
-public class PersonServiceTestImpl implements IPersonServiceTest{
+@Service("personService")
+public class PersonServiceImpl implements IPersonService{
 	@Autowired    
     private IPersonDao personDao; 
 	@Override
