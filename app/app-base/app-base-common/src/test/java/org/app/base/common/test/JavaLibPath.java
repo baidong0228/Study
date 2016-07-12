@@ -7,7 +7,7 @@
  * you entered into with Founder.   
  *   
  */
-package org.app.base.common;
+package org.app.base.common.test;
 
 /**
  * 打印java.library.path

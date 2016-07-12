@@ -18,9 +18,9 @@
   </properties>
   <dependencies>
 	<dependency>
-            <groupId>com.bdong</groupId>
-            <artifactId>app-base-common</artifactId>
-           <version>${project.version}</version>
-        </dependency>
+		<groupId>com.bdong</groupId>
+		<artifactId>app-base-common</artifactId>
+		<version>${project.version}</version>
+	</dependency>
   </dependencies>
 </project>

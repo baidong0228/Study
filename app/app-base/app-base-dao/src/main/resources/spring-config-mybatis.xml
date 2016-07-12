@@ -54,7 +54,7 @@
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>  
     </bean> --> 
     
-	<!-- MapperFactoryBean方式，无需DAO实现类 -->
+	<!-- 采用数据映射器（MapperFactoryBean）的方式，无需DAO实现类 -->
    	<bean id="personDao" class="org.mybatis.spring.mapper.MapperFactoryBean">  
     	<property name="mapperInterface" value="org.app.base.dao.IPersonDao"></property>  
     	<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>  
