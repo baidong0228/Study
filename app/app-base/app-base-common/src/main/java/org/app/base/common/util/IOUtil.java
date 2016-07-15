@@ -9,7 +9,11 @@
  */     
 package org.app.base.common.util;    
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
     
 /**
@@ -22,6 +26,7 @@ import java.io.IOException;
 public class IOUtil {
 	/**
 	 * 读取指定文件，按照16进制输出到控制台，每10个byte换行
+	 * (单字节读取，不适合大文件)
 	 * @param fileName  
 	 * @author Bdong
 	 * @throws IOException 
@@ -44,6 +49,87 @@ public class IOUtil {
 		}
 		// 关闭字节流
 		fis.close();
+	}
+	
+	/**
+	 * 批量读取，适合大文件
+	 * @param fileName
+	 * @throws IOException  
+	 * @author Bdong
+	 */
+	public static void printHexByByteArray(String fileName) throws IOException{
+		// 输入流，从指定文件中读取字节流
+		FileInputStream fis = new FileInputStream(fileName);
+		byte[] buf = new byte[8*1024];
+		int bytes = 0;
+		int j=1;
+		while ((bytes = fis.read(buf, 0, buf.length)) != -1) {
+			for(int i=0;i<bytes;i++){
+				// 转换成16进制输出到控制台
+				System.out.print(Integer.toHexString(buf[i] & 0xff) + " ");
+				if (j++ % 10 == 0) {// 如果读到10个byte则换行
+					System.out.println();
+				}
+			}
+		}
+		// 关闭字节流
+		fis.close();
+	}
+	
+	/**
+	 * 批量方式拷贝文件，大文件时速度最快
+	 * @param srcFile
+	 * @param destFile
+	 * @throws IOException  
+	 * @author Bdong
+	 */
+	public static void copyFile(File srcFile, File destFile) throws IOException{
+		if(!srcFile.exists()){
+			throw new IllegalArgumentException("文件："+srcFile+"不存在！");
+		}
+		if(!srcFile.isFile()){
+			throw new IllegalArgumentException(srcFile+"不是文件！");
+		}
+		//输入流
+		FileInputStream fis =new FileInputStream(srcFile);
+		//输出流
+		FileOutputStream fos =new FileOutputStream(destFile);
+		//缓冲区
+		byte[] buf =new byte[8*1024];
+		int bytes;
+		while((bytes=fis.read(buf, 0, buf.length))!=-1){
+			fos.write(buf,0,bytes);
+			fos.flush();
+		}
+		fos.close();
+		fis.close();
+	}
+	
+	/**
+	 * 缓冲方式拷贝文件
+	 * @param srcFile
+	 * @param destFile
+	 * @throws IOException  
+	 * @author Bdong
+	 */
+	public static void copyFileByBuffer(File srcFile, File destFile) throws IOException{
+		if(!srcFile.exists()){
+			throw new IllegalArgumentException("文件："+srcFile+"不存在！");
+		}
+		if(!srcFile.isFile()){
+			throw new IllegalArgumentException(srcFile+"不是文件！");
+		}
+		//带缓冲的输入流
+		BufferedInputStream bis=new BufferedInputStream(new FileInputStream(srcFile));
+		//带缓冲的输出流
+		BufferedOutputStream bos =new BufferedOutputStream(new FileOutputStream(destFile));
+		int c;
+		while((c=bis.read())!=-1){
+			bos.write(c);
+			bos.flush();//刷新缓冲区
+		}
+		bos.close();
+		bis.close();
 	}
 }
   

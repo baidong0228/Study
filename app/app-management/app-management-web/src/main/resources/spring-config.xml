@@ -27,6 +27,8 @@
         </property>
     </bean> -->
 	
-	<import resource="classpath:spring-config-mvc.xml"/>
+	<!-- 统一管理配置文件 -->
+	<!-- 在DAO层配置的 -->
 	<import resource="classpath*:spring-config-mybatis.xml"/>
+	<!-- 其他配置文件 -->
 </beans>

@@ -7,23 +7,22 @@
  * you entered into with Founder.   
  *   
  */     
-package org.app.base.service.imp;    
+package org.app.management.service.imp;    
 
-import org.app.base.dao.IPersonDao;
-import org.app.base.domain.Person;
-import org.app.base.service.IPersonService;
+import org.app.base.dao.IAdultVideoStarDao;
+import org.app.base.domain.AdultVideoStar;
+import org.app.management.service.IAdultVideoStarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-@Service("personService")
-public class PersonServiceImpl implements IPersonService{
+    
+@Service("avStarService")
+public class IAdultVideoServiceImpl implements IAdultVideoStarService {
 	@Autowired    
-    private IPersonDao personDao; 
+    private IAdultVideoStarDao avStarDao;
 	@Override
-	public Person selectByPrimaryKey(Integer id) {
+	public AdultVideoStar selectByPrimaryKey(Integer id) {
 		// TODO Auto-generated method stub
-		return personDao.selectByPrimaryKey(id);
+		return avStarDao.selectByPrimaryKey(id);
 	}
-
 }
   

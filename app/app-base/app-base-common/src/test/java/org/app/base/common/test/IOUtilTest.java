@@ -9,6 +9,7 @@
  */     
 package org.app.base.common.test;    
 
+import java.io.File;
 import java.io.IOException;
 
 import org.app.base.common.util.IOUtil;
@@ -17,7 +18,11 @@ public class IOUtilTest {
 
 	public static void main(String args[]){
 		try {
-			IOUtil.printHex("/Users/Bdong/Downloads/2016/month_rain_trend_201611.png");
+			long start=System.currentTimeMillis();
+			IOUtil.copyFile(new File("/Users/Bdong/360云盘/Mac/Mac.xlsx"),new File("/Users/Bdong/Downloads/1.xlsx"));
+			long end=System.currentTimeMillis();
+			System.out.println();
+			System.out.println("花费"+(end-start)+"毫秒");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

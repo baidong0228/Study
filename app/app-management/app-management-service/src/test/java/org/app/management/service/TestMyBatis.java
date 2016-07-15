@@ -7,11 +7,12 @@
  * you entered into with Founder.   
  *   
  */     
-package org.app.base.service;    
+package org.app.management.service;    
 
 
 import org.apache.log4j.Logger;
 import org.app.base.domain.AdultVideoStar;
+import org.app.management.service.IAdultVideoStarService;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
