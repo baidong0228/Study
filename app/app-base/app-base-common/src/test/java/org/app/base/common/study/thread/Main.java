@@ -7,16 +7,15 @@
  * you entered into with Founder.   
  *   
  */     
-package org.app.base.common.study.io;    
-
-import java.io.File;
-
-import org.app.base.common.util.FileUtil;
+package org.app.base.common.study.thread;    
     
-public class FileUtilTest {
-	public static void main(String args[]){
-		File file1=new File("/Users/Bdong/Downloads/coreJava");
-		FileUtil.listDirectory(file1);
+public class Main {
+	public static void main(String[] args) {
+		new AdultVideoShow1("泷泽萝拉").start();
+		new AdultVideoShow1("苍井空").start();
+		
+		new Thread(new AdultVideoShow2("小泽玛利亚")).start();
+		new Thread(new AdultVideoShow2("波多野结衣")).start();
 	}
 }
   

@@ -20,7 +20,7 @@ import java.io.File;
  */
 public class FileUtil {
 	/**
-	 * 列出文件下所有的内容
+	 * 列出指定目录下所有的内容
 	 * @param dir  
 	 * @author Bdong
 	 */

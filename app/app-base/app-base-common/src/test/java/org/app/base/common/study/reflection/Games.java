@@ -7,16 +7,9 @@
  * you entered into with Founder.   
  *   
  */     
-package org.app.base.common.study.io;    
-
-import java.io.File;
-
-import org.app.base.common.util.FileUtil;
+package org.app.base.common.study.reflection;    
     
-public class FileUtilTest {
-	public static void main(String args[]){
-		File file1=new File("/Users/Bdong/Downloads/coreJava");
-		FileUtil.listDirectory(file1);
-	}
+public interface Games {
+	 public abstract void play();
 }
   

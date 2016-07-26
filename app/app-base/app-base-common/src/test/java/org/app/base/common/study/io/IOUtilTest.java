@@ -7,7 +7,7 @@
  * you entered into with Founder.   
  *   
  */     
-package org.app.base.common.test;    
+package org.app.base.common.study.io;    
 
 import java.io.File;
 import java.io.IOException;

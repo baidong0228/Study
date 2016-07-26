@@ -26,7 +26,6 @@ public class AdultVideoStar {
 	private String cup;
 	//马赛克
 	private String mosaic;
-	
 	public String getChineseName() {
 		return chineseName;
 	}
