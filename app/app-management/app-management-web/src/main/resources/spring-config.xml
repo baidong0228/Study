@@ -14,7 +14,12 @@
        		http://www.springframework.org/schema/mvc/spring-mvc.xsd"
        default-autowire="byName">
 	
+	<!-- 启用Spring基于annotation的DI，可以在Spring MVC中使用Spring的功能 -->
+	<context:annotation-config/> 
+	
+	<!-- 扩充注解驱动，将请求参数绑定到控制器参数 --> 
 	<mvc:annotation-driven/>
+	
 	<!-- <bean id="propertyConfigurer"
         class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
@@ -28,7 +33,8 @@
     </bean> -->
 	
 	<!-- 统一管理配置文件 -->
-	<!-- 在DAO层配置的 -->
+	<!-- mybatis -->
 	<import resource="classpath*:spring-config-mybatis.xml"/>
-	<!-- 其他配置文件 -->
+	<!-- AOP -->
+	<import resource="classpath*:spring-config-aop.xml"/>
 </beans>
