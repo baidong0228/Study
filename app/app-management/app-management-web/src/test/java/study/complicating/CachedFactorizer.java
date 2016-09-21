@@ -7,8 +7,8 @@ import javax.servlet.Servlet;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
-import org.app.base.common.study.annotations.GuardedBy;
-import org.app.base.common.study.annotations.ThreadSafe;
+import org.app.base.common.annotations.GuardedBy;
+import org.app.base.common.annotations.ThreadSafe;
 
 /**
  * CachedFactorizer

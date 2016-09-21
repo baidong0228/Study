@@ -7,7 +7,7 @@
  * you entered into with Founder.   
  *   
  */     
-package org.app.base.common.study.annotations;    
+package org.app.base.common.annotations;    
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
@@ -15,7 +15,8 @@ import java.lang.annotation.RetentionPolicy;
     
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
-public @interface GuardedBy {
-	String value();
+public @interface ThreadSafe {
+
+	//线程安全的注解
 }
   

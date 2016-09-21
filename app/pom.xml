@@ -18,6 +18,6 @@
     <modules>
 	    <module>app-base</module>
 	    <module>app-management</module>
-	    <module>app-merchant</module>
+	    <!-- <module>app-merchant</module> -->
   </modules>
 </project>
