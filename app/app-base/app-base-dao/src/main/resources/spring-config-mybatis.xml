@@ -10,6 +10,7 @@
 
     <!--spring自动扫描-->
     <context:component-scan base-package="org.app"/>
+    
     <!-- 引入配置文件 -->
     <bean id="propertyConfigurer"
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
@@ -19,27 +20,27 @@
 	<!-- dbcp数据源 -->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close">
-        <property name="driverClassName" value="${driver}" />
-        <property name="url" value="${url}" />
-        <property name="username" value="${username}" />
-        <property name="password" value="${password}" />
+        <property name="driverClassName" value="${dataSource.driver}" />
+        <property name="url" value="${dataSource.url}" />
+        <property name="username" value="${dataSource.username}" />
+        <property name="password" value="${dataSource.password}" />
         <!-- 初始化连接大小 -->
-        <property name="initialSize" value="${initialSize}"></property>
+        <property name="initialSize" value="${dataSource.initialSize}"></property>
         <!-- 连接池最大数量 -->
-        <property name="maxActive" value="${maxActive}"></property>
+        <property name="maxActive" value="${dataSource.maxActive}"></property>
         <!-- 连接池最大空闲 -->
-        <property name="maxIdle" value="${maxIdle}"></property>
+        <property name="maxIdle" value="${dataSource.maxIdle}"></property>
         <!-- 连接池最小空闲 -->
-        <property name="minIdle" value="${minIdle}"></property>
+        <property name="minIdle" value="${dataSource.minIdle}"></property>
         <!-- 获取连接最大等待时间 -->
-        <property name="maxWait" value="${maxWait}"></property>
+        <property name="maxWait" value="${dataSource.maxWait}"></property>
     </bean>
 
    <!-- 	 spring和MyBatis整合，不需要mybatis的配置映射文件   -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">  
         <property name="dataSource" ref="dataSource" />  
         <!-- <property name="mapperLocations" value="classpath:mapping/*.xml" /> -->
-        <property name="configLocation" value="classpath:mybatis-config-sqlmap.xml"></property>
+        <property name="configLocation" value="classpath:mybatis-sqlmap.xml"></property>
     </bean> 
 
     <!-- (事务管理)transaction manager, use JtaTransactionManager for global tx -->
@@ -48,15 +49,17 @@
         <property name="dataSource" ref="dataSource" />
     </bean>
 
-	<!-- DAO接口所在包名，Spring会自动查找其下的类，无需实现类，暂时不使用，有BUG   -->
-   	<!--  <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">  
-        <property name="basePackage" value="org.app.base.dao" />  
-        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>  
-    </bean> --> 
-    
 	<!-- 采用数据映射器（MapperFactoryBean）的方式，无需DAO实现类 -->
-   	<bean id="personDao" class="org.mybatis.spring.mapper.MapperFactoryBean">  
-    	<property name="mapperInterface" value="org.app.base.dao.IPersonDao"></property>  
+	<bean id="userDao" class="org.mybatis.spring.mapper.MapperFactoryBean">  
+    	<property name="mapperInterface" value="org.app.base.dao.IUserDao"></property>  
+    	<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>  
+	</bean>
+	<bean id="groupDao" class="org.mybatis.spring.mapper.MapperFactoryBean">  
+    	<property name="mapperInterface" value="org.app.base.dao.IGroupDao"></property>  
+    	<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>  
+	</bean>
+	<bean id="logDao" class="org.mybatis.spring.mapper.MapperFactoryBean">  
+    	<property name="mapperInterface" value="org.app.base.dao.ILogDao"></property>  
     	<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>  
 	</bean>
 	<bean id="avStarDao" class="org.mybatis.spring.mapper.MapperFactoryBean">  

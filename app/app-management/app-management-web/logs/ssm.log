@@ -50,4 +50,32 @@
   [INFO] [2016-09-21 17:37:28][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-config-aop.xml]
   [INFO] [2016-09-21 17:37:29][BdAspect]BdAspect before()
   [INFO] [2016-09-21 17:37:29][AspectBiz]AspectBiz biz()
+  [INFO] [2016-09-21 23:08:26][org.springframework.context.support.ClassPathXmlApplicationContext]Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@549f4bec: startup date [Wed Sep 21 23:08:26 CST 2016]; root of context hierarchy
+  [INFO] [2016-09-21 23:08:26][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-config-aop.xml]
+  [INFO] [2016-09-21 23:08:27][BdAspect]BdAspect before()
+  [INFO] [2016-09-21 23:08:27][AspectBiz]AspectBiz biz()
+  [INFO] [2016-09-22 14:36:38][org.springframework.context.support.ClassPathXmlApplicationContext]Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@17ef771b: startup date [Thu Sep 22 14:36:38 CST 2016]; root of context hierarchy
+  [INFO] [2016-09-22 14:36:38][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-config-aop.xml]
+  [INFO] [2016-09-22 14:36:38][BdAspect]BdAspect before()
+  [INFO] [2016-09-22 14:36:38][AspectBiz]AspectBiz biz()
+  [INFO] [2016-11-03 14:34:40][org.springframework.context.support.ClassPathXmlApplicationContext]Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5f3bbd78: startup date [Thu Nov 03 14:34:40 CST 2016]; root of context hierarchy
+  [INFO] [2016-11-03 14:34:40][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-config-aop.xml]
+  [INFO] [2016-11-03 14:34:41][BdAspect]BdAspect before()
+  [INFO] [2016-11-03 14:34:41][AspectBiz]AspectBiz biz()
+  [INFO] [2016-11-06 09:40:03][org.springframework.context.support.ClassPathXmlApplicationContext]Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4231c44c: startup date [Sun Nov 06 09:40:03 CST 2016]; root of context hierarchy
+  [INFO] [2016-11-06 09:40:03][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-config-aop.xml]
+  [INFO] [2016-11-06 09:40:04][BdAspect]BdAspect before()
+  [INFO] [2016-11-06 09:40:04][AspectBiz]AspectBiz biz()
+  [INFO] [2016-11-06 10:41:16][org.springframework.context.support.ClassPathXmlApplicationContext]Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@514e7b87: startup date [Sun Nov 06 10:41:16 CST 2016]; root of context hierarchy
+  [INFO] [2016-11-06 10:41:16][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-config-aop.xml]
+  [INFO] [2016-11-06 10:41:17][BdAspect]BdAspect before()
+  [INFO] [2016-11-06 10:41:17][AspectBiz]AspectBiz biz()
+  [INFO] [2016-11-06 10:52:31][org.springframework.context.support.ClassPathXmlApplicationContext]Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4231c44c: startup date [Sun Nov 06 10:52:31 CST 2016]; root of context hierarchy
+  [INFO] [2016-11-06 10:52:31][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-config-aop.xml]
+  [INFO] [2016-11-06 10:52:32][BdAspect]BdAspect before()
+  [INFO] [2016-11-06 10:52:32][AspectBiz]AspectBiz biz()
+  [INFO] [2016-11-06 10:58:49][org.springframework.context.support.ClassPathXmlApplicationContext]Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@514e7b87: startup date [Sun Nov 06 10:58:49 CST 2016]; root of context hierarchy
+  [INFO] [2016-11-06 10:58:49][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-config-aop.xml]
+  [INFO] [2016-11-06 10:58:49][BdAspect]BdAspect before()
+  [INFO] [2016-11-06 10:58:49][AspectBiz]AspectBiz biz()
   

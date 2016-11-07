@@ -12,14 +12,15 @@ package org.app.management.service;
 
 import org.apache.log4j.Logger;
 import org.app.base.domain.AdultVideoStar;
-import org.app.management.service.IAdultVideoStarService;
+import org.app.base.service.IAdultVideoStarService;
 import org.junit.Before;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.test.context.transaction.TransactionConfiguration;
-    
+
+import javax.annotation.Resource;
+
 
 /**
  * TestMyBatis
@@ -32,18 +33,18 @@ import org.springframework.test.context.transaction.TransactionConfiguration;
 public class TestMyBatis {
 	private static Logger logger = Logger.getLogger("TestMyBatis");
 	private ApplicationContext ac = null;
-	@Autowired
-	private IAdultVideoStarService avStarService;
+	@Resource(name = "avStarServiceImpl")
+	private IAdultVideoStarService avStarServiceImpl;
 
 	@Before
 	public void before() {
 		ac = new ClassPathXmlApplicationContext("spring-config-mybatis.xml");
-		avStarService = (IAdultVideoStarService) ac.getBean("avStarService");
+		avStarServiceImpl = (IAdultVideoStarService) ac.getBean("avStarServiceImpl");
 	}
 
 	@Test
 	public void test() {
-		AdultVideoStar avStar = avStarService.selectByPrimaryKey(1);
+		AdultVideoStar avStar = avStarServiceImpl.selectByPrimaryKey(1);
 		logger.info("ChineseName:" + avStar.getChinesename());
 		logger.info("EnglishName:" + avStar.getEnglishname());
 		logger.info("Birthday:" + avStar.getBirthday());

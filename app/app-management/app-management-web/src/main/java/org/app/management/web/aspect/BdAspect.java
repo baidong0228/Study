@@ -9,9 +9,11 @@
  */     
 package org.app.management.web.aspect;    
 
+import org.aopalliance.intercept.MethodInterceptor;
+import org.aopalliance.intercept.MethodInvocation;
 import org.apache.log4j.Logger;
 
-public class BdAspect {
+public class BdAspect implements MethodInterceptor{
 	private static Logger logger = Logger.getLogger("BdAspect");
 
 	public void before(){
@@ -20,6 +22,10 @@ public class BdAspect {
 	
 	public void afterReturning(){
 		System.out.println("afterReturning");
+	}
+
+	public Object invoke(MethodInvocation methodInvocation) throws Throwable {
+		return null;
 	}
 }
   

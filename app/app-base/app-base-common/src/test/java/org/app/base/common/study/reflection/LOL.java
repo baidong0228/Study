@@ -12,9 +12,7 @@ package org.app.base.common.study.reflection;
     
 public class LOL implements Games{
 
-	@Override
 	public void play() {
-		// TODO Auto-generated method stub
 		 System.out.println("Legendary！");
 	}
 

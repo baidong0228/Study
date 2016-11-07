@@ -10,7 +10,23 @@
     <url>http://maven.apache.org</url>
 
     <properties>
+        <!-- 项目build编码设置-->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- 依赖包版本控制-->
+        <junit.version>4.12</junit.version>
+        <chiknrice.version>0.0.1</chiknrice.version>
+        <poi.version>3.12</poi.version>
+        <mybatis.version>3.2.8</mybatis.version>
+        <mybatis-spring.version>1.2.2</mybatis-spring.version>
+        <mysql.version>5.1.38</mysql.version>
+        <spring.version>4.3.2.RELEASE</spring.version>
+        <dbcp.version>1.4</dbcp.version>
+        <log4j.version>1.2.17</log4j.version>
+        <servlet.version>3.1.0</servlet.version>
+        <aspectj.version>1.8.9</aspectj.version>
+        <jackson.version>2.8.1</jackson.version>
+
     </properties>
 
     <packaging>pom</packaging>
@@ -19,5 +35,13 @@
 	    <module>app-base</module>
 	    <module>app-management</module>
 	    <!-- <module>app-merchant</module> -->
-  </modules>
+    </modules>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>bdong</id>
+            <name>Bdong Snapshot Repository</name>
+            <url>http://112.74.201.84:8081/nexus/content/repositories/bdong/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>

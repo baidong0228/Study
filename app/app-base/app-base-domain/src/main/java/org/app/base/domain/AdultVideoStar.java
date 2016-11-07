@@ -7,7 +7,7 @@
  * you entered into with Founder.   
  *   
  */     
-package org.app.base.domain;    
+package org.app.base.domain;
 
 import java.util.Date;
     

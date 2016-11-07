@@ -13,9 +13,6 @@
   <name>app-base-domain</name>
   <url>http://maven.apache.org</url>
   
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
   <dependencies>
 	<dependency>
 		<groupId>com.bdong</groupId>

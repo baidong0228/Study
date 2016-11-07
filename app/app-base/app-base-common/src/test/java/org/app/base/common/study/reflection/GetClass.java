@@ -10,8 +10,8 @@
 package org.app.base.common.study.reflection;    
 
 import org.app.base.common.excel.AdultVideoStar;
-import org.app.base.common.util.ClassUtil;
-    
+import org.app.base.common.utils.ClassUtils;
+
 public class GetClass {
 	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		Class c1 = AdultVideoStar.class;//通过类获取Class，任何一个类都有一个隐含的class静态成员变量。
@@ -21,8 +21,8 @@ public class GetClass {
 		System.out.println(c2==c3);
 		
 		AdultVideoStar av =(AdultVideoStar)c3.newInstance();
-		ClassUtil.printClassMethodMessage(av);
-		ClassUtil.printConMessage(av);
+		ClassUtils.printClassMethodInfo(av);
+		ClassUtils.printConInfo(av);
 //		System.out.println(av);
 	}
 }

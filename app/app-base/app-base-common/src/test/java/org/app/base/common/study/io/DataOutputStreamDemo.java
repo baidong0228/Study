@@ -13,8 +13,8 @@ import java.io.DataOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import org.app.base.common.util.IOUtil;
-    
+import org.app.base.common.utils.IOUtils;
+
 public class DataOutputStreamDemo {
 	public static void main(String[] args) throws IOException{
 		String file = "/Users/Bdong/Downloads/test.txt";
@@ -33,7 +33,7 @@ public class DataOutputStreamDemo {
 		dos.close();
 		out.close();
 
-		IOUtil.printHex(file);
+		IOUtils.printHex(file);
 	}
 }
   

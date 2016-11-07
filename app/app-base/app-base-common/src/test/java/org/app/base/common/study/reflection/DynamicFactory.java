@@ -9,7 +9,6 @@
  */     
 package org.app.base.common.study.reflection;    
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
     
 public class DynamicFactory {
@@ -23,7 +22,7 @@ public class DynamicFactory {
 		return game;
 	}
 	
-	public static void main(String[] a) throws FileNotFoundException,
+	public static void main(String[] a) throws
 			IOException {
 		Games game = DynamicFactory.getInstance("org.app.base.common.study.reflection.LOL");
 		if (game != null) {

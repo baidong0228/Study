@@ -1,42 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
-    xmlns="http://java.sun.com/xml/ns/javaee"  
-    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"  
-    version="3.0">  
-  	<display-name>SpringMVC</display-name>
-
-	<!-- 引入配置文件 --> 
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<display-name>SpringMVC</display-name>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:spring-config.xml</param-value>
 	</context-param>
 	
-	<!-- 编码过滤器 -->  
-    <filter>  
-        <filter-name>encodingFilter</filter-name>  
-        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>  
-        <async-supported>true</async-supported>  
-        <init-param>  
-            <param-name>encoding</param-name>  
-            <param-value>UTF-8</param-value>  
-        </init-param>  
-    </filter>  
-    <filter-mapping>  
-        <filter-name>encodingFilter</filter-name>  
-        <url-pattern>/*</url-pattern>  
-    </filter-mapping>
-    
-    <!-- Spring监听器 -->  
-    <listener>  
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>  
-    </listener>  
-    
-    <!-- 防止Spring内存溢出监听器 -->  
-    <listener>  
-        <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>  
-    </listener>
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<async-supported>true</async-supported>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	
+	<filter>
+		<filter-name>LoginFilter</filter-name>
+		<filter-class>org.app.management.web.filters.LoginFilter</filter-class>
+		<init-param>
+			<param-name>noLoginPaths</param-name>
+			<param-value>/controller/login/;index.html;/controller/error/;</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+		<url-pattern>/controller/*</url-pattern>
+	</filter-mapping>
 
-	<!-- Spring MVC servlet -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
+	
 	<servlet>
 		<servlet-name>SpringMVC</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -49,12 +56,19 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>SpringMVC</servlet-name>
-		<!-- 此处可以可以配置成*.do，对应struts的后缀习惯 -->
-		<url-pattern>/</url-pattern>
-	</servlet-mapping>  
+		<!-- 在所有controller前边默认添加/controller -->
+		<url-pattern>/controller/*</url-pattern>
+	</servlet-mapping>
 	
-	<!-- 欢迎 -->
 	<welcome-file-list>
-		<welcome-file>/index2.jsp</welcome-file>
-	</welcome-file-list>  
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	<error-page>
+        <error-code>500</error-code>
+        <location>/WEB-INF/views/common/error500.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/views/common/error404.jsp</location>
+    </error-page>
 </web-app>

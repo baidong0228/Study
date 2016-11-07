@@ -1,6 +1,9 @@
 package org.app.base.dao;
 
+
 import org.app.base.domain.AdultVideoStar;
+
+import java.util.List;
 
 public interface IAdultVideoStarDao {
     int deleteByPrimaryKey(Integer id);
@@ -10,6 +13,8 @@ public interface IAdultVideoStarDao {
     int insertSelective(AdultVideoStar record);
 
     AdultVideoStar selectByPrimaryKey(Integer id);
+    
+    List<AdultVideoStar> selectAll();
 
     int updateByPrimaryKeySelective(AdultVideoStar record);
 

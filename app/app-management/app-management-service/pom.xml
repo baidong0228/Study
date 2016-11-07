@@ -13,7 +13,6 @@
   <name>app-management-service</name>
   <url>http://maven.apache.org</url>
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 	<dependencies>
 		<dependency>
@@ -21,13 +20,13 @@
 			<artifactId>app-base-service</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-	
-		<!-- servlet -->
-		<!-- http://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
-		</dependency>
-	</dependencies>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+    </dependencies>
 </project>

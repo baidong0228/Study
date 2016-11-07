@@ -9,6 +9,8 @@
  */     
 package org.app.base.common.excel;    
 
+import org.app.base.common.utils.ExcelUtils;
+
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -18,12 +20,11 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import org.app.base.common.util.ExcelUtil;
-    
+
 public class TestExcel {
 	public static void main(String[] args) {
 		try {
-			ExcelUtil<AdultVideoStar> eu=new ExcelUtil<AdultVideoStar>();//初始化Excel工具
+			ExcelUtils<AdultVideoStar> eu=new ExcelUtils<AdultVideoStar>();//初始化Excel工具
 			/**入参准备 start**/
 			/**Excel表头，表头顺序与对象属性顺序一致**/
 			String[] headers={ "中文名", "英文名", "出生日期", "身高(cm)", "三围", "罩杯", "作战兵种" };
