@@ -1,56 +1,53 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.bdong</groupId>
-    <artifactId>app-management</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <artifactId>app-management-web</artifactId>
-  <packaging>war</packaging>
-  <name>app-management-web Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  <dependencies>
-  	<dependency>
-		<groupId>com.bdong</groupId>
-		<artifactId>app-management-service</artifactId>
-		<version>${project.version}</version>
-	</dependency>
-	
-	<!-- Spring start -->
-	<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
-	<dependency>
-		<groupId>org.springframework</groupId>
-		<artifactId>spring-core</artifactId>
-		<version>${spring.version}</version>
-	</dependency>
-	
-	<!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
-	  <dependency>
-		  <groupId>org.springframework</groupId>
-		  <artifactId>spring-aop</artifactId>
-		  <version>${spring.version}</version>
-	  </dependency>
-	
-	<!-- http://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
-	<dependency>
-	    <groupId>org.springframework</groupId>
-	    <artifactId>spring-webmvc</artifactId>
-	    <version>${spring.version}</version>
-	</dependency>
-	
-	<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
-	<dependency>
-	    <groupId>org.aspectj</groupId>
-	    <artifactId>aspectjweaver</artifactId>
-	    <version>${aspectj.version}</version>
-	</dependency>
-	
-	
-	<!-- Spring end -->
-  </dependencies>
-  <build>
-    <finalName>app-management-web</finalName>
-  </build>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.bdong</groupId>
+        <artifactId>app-management</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>app-management-web</artifactId>
+    <packaging>war</packaging>
+    <name>app-management-web Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+    <dependencies>
+        <dependency>
+            <groupId>com.bdong</groupId>
+            <artifactId>app-management-service</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- Spring start -->
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+        </dependency>
+
+        <!-- http://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+        </dependency>
+
+
+        <!-- Spring end -->
+    </dependencies>
+    <build>
+        <finalName>app-management-web</finalName>
+    </build>
 </project>

@@ -6,26 +6,26 @@
  * and shall use it only in accordance with the terms of the agreements   
  * you entered into with Founder.   
  *   
- */     
+ */
 package org.app.base.service.impl;
-
-import javax.annotation.Resource;
 
 import org.app.base.dao.IGroupDao;
 import org.app.base.domain.Group;
 import org.app.base.service.IGroupService;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+
 
 @Service("groupServiceImpl")
 public class GroupServiceImpl implements IGroupService {
-	@Resource(name="groupDao") 
+    @Resource(name = "groupDao")
     private IGroupDao groupDao;
-	
-	public Group selectByPrimaryKey(String id) {
-		// TODO Auto-generated method stub
-		return groupDao.selectByPrimaryKey(id);
-	}
+
+    public Group selectByPrimaryKey(String id) {
+        // TODO Auto-generated method stub
+        return groupDao.selectByPrimaryKey(id);
+    }
 
 }
   

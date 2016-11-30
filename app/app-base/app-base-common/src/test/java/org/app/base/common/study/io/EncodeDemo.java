@@ -19,20 +19,20 @@ import java.io.UnsupportedEncodingException;
  */
 class EncodeDemo {
     public static void main(String[] args) throws UnsupportedEncodingException {
-       String s1 ="字符串ABC";
-       byte[] bytes_utf_8=s1.getBytes();//使用项目默认编码转换成字节序列
-       byte[] bytes_gbk=s1.getBytes("gbk");//使用指定编码（gbk）转换成字节序列
-       System.out.println("utf_8:");
-       for(byte b1:bytes_utf_8){
-    	   //把byte转换为16进制的int进行展示
-    	   System.out.print(Integer.toHexString(b1 & 0xff)+" ");
-       }
-       System.out.println();
-       System.out.println("gbk:");
-       for(byte b1:bytes_gbk){
-    	   //把byte转换为16进制的int进行展示
-    	   System.out.print(Integer.toHexString(b1 & 0xff)+" ");
-       }
+        String s1 = "字符串ABC";
+        byte[] bytes_utf_8 = s1.getBytes();//使用项目默认编码转换成字节序列
+        byte[] bytes_gbk = s1.getBytes("gbk");//使用指定编码（gbk）转换成字节序列
+        System.out.println("utf_8:");
+        for (byte b1 : bytes_utf_8) {
+            //把byte转换为16进制的int进行展示
+            System.out.print(Integer.toHexString(b1 & 0xff) + " ");
+        }
+        System.out.println();
+        System.out.println("gbk:");
+        for (byte b1 : bytes_gbk) {
+            //把byte转换为16进制的int进行展示
+            System.out.print(Integer.toHexString(b1 & 0xff) + " ");
+        }
     }
 }
   

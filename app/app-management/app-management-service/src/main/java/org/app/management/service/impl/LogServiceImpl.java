@@ -6,7 +6,7 @@
  * and shall use it only in accordance with the terms of the agreements   
  * you entered into with Founder.   
  *   
- */     
+ */
 package org.app.management.service.impl;
 
 
@@ -19,13 +19,13 @@ import javax.annotation.Resource;
 
 @Service("logServiceImpl")
 public class LogServiceImpl implements ILogService {
-	@Resource(name="logDao")
-	private ILogDao logDao;
-	
-	public int insertSelective(Log record) {
-		// TODO Auto-generated method stub
-		return logDao.insertSelective(record);
-	}
+    @Resource(name = "logDao")
+    private ILogDao logDao;
+
+    public int insertSelective(Log record) {
+        // TODO Auto-generated method stub
+        return logDao.insertSelective(record);
+    }
 
 }
   

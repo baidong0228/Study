@@ -1,0 +1,4 @@
+2016-11-08 17:19:17 [org.springframework.context.support.ClassPathXmlApplicationContext]-[INFO] [main] (AbstractApplicationContext.java:581) ->Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1b1accfc: startup date [Tue Nov 08 17:19:17 CST 2016]; root of context hierarchy 
+2016-11-08 17:19:17 [org.springframework.beans.factory.xml.XmlBeanDefinitionReader]-[INFO] [main] (XmlBeanDefinitionReader.java:317) ->Loading XML bean definitions from class path resource [spring-config-aop.xml] 
+2016-11-08 17:19:17 [BdAspect]-[INFO] [main] (BdAspect.java:20) ->BdAspect before() 
+2016-11-08 17:19:17 [AspectBiz]-[INFO] [main] (AspectBiz.java:18) ->AspectBiz biz() 

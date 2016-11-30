@@ -6,26 +6,26 @@
  * and shall use it only in accordance with the terms of the agreements   
  * you entered into with Founder.   
  *   
- */     
-package org.app.management.web.aspect;    
+ */
+package org.app.management.web.aspect;
 
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 import org.apache.log4j.Logger;
 
-public class BdAspect implements MethodInterceptor{
-	private static Logger logger = Logger.getLogger("BdAspect");
+public class BdAspect implements MethodInterceptor {
+    private static Logger logger = Logger.getLogger("BdAspect");
 
-	public void before(){
-		logger.info("BdAspect before()");
-	}
-	
-	public void afterReturning(){
-		System.out.println("afterReturning");
-	}
+    public void before() {
+        logger.info("BdAspect before()");
+    }
 
-	public Object invoke(MethodInvocation methodInvocation) throws Throwable {
-		return null;
-	}
+    public void afterReturning() {
+        System.out.println("afterReturning");
+    }
+
+    public Object invoke(MethodInvocation methodInvocation) throws Throwable {
+        return null;
+    }
 }
   

@@ -6,32 +6,35 @@
  * and shall use it only in accordance with the terms of the agreements   
  * you entered into with Founder.   
  *   
- */     
+ */
 package org.app.base.domain.query;
 
 import org.app.base.domain.User;
 
 public class UserQuery extends User {
-	/**
-	 *  旧密码
-	 */
-	private String passwordOld;
-	/**
-	 *  新密码
-	 */
-	private String passwordNew;
-	
-	public String getPasswordOld() {
-		return passwordOld;
-	}
-	public void setPasswordOld(String passwordOld) {
-		this.passwordOld = passwordOld;
-	}
-	public String getPasswordNew() {
-		return passwordNew;
-	}
-	public void setPasswordNew(String passwordNew) {
-		this.passwordNew = passwordNew;
-	}
+    /**
+     *  旧密码
+     */
+    private String passwordOld;
+    /**
+     *  新密码
+     */
+    private String passwordNew;
+
+    public String getPasswordOld() {
+        return passwordOld;
+    }
+
+    public void setPasswordOld(String passwordOld) {
+        this.passwordOld = passwordOld;
+    }
+
+    public String getPasswordNew() {
+        return passwordNew;
+    }
+
+    public void setPasswordNew(String passwordNew) {
+        this.passwordNew = passwordNew;
+    }
 }
   

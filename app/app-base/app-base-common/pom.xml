@@ -1,61 +1,43 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.bdong</groupId>
-    <artifactId>app-base</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.bdong</groupId>
+        <artifactId>app-base</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
 
-  <artifactId>app-base-common</artifactId>
+    <artifactId>app-base-common</artifactId>
 
-  <name>app-base-common</name>
-  <url>http://maven.apache.org</url>
+    <name>app-base-common</name>
+    <url>http://maven.apache.org</url>
 
-  <dependencies>
-	<!--单元测试 start -->
-	<dependency>
-		<groupId>junit</groupId>
-		<artifactId>junit</artifactId>
-		<version>${junit.version}</version>
-		<!-- 表示开发的时候引入，发布的时候不会加载此包 -->
-		<scope>test</scope>
-	</dependency>
-	<!-- http://mvnrepository.com/artifact/org.chiknrice/concordion-spring-runner -->
-	<dependency>
-	    <groupId>org.chiknrice</groupId>
-	    <artifactId>concordion-spring-runner</artifactId>
-	    <version>${chiknrice.version}</version>
-	</dependency>
-	<!--单元测试 end -->
+    <dependencies>
+        <!-- Excel -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+        </dependency>
+        <!-- Excel -->
 
-	<!-- Excel -->
-	<dependency>
-	    <groupId>org.apache.poi</groupId>
-	    <artifactId>poi</artifactId>
-    	<version>${poi.version}</version>
-	</dependency>
-	<!-- Excel -->
+        <!-- servlet -->
+        <!-- http://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+        </dependency>
 
-	  <!-- servlet -->
-	  <!-- http://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
-	  <dependency>
-		  <groupId>javax.servlet</groupId>
-		  <artifactId>javax.servlet-api</artifactId>
-		  <version>${servlet.version}</version>
-	  </dependency>
+        <!-- json -->
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+    </dependencies>
 
-	  <!-- json -->
-	  <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
-	  <dependency>
-		  <groupId>com.fasterxml.jackson.core</groupId>
-		  <artifactId>jackson-databind</artifactId>
-		  <version>${jackson.version}</version>
-	  </dependency>
-  </dependencies>
+    <build>
 
-	<build>
-
-	</build>
+    </build>
 </project>

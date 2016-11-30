@@ -3,11 +3,10 @@ package org.app.base.domain;
 import java.util.Date;
 
 /**
- * 
- * This class is used for ...   
- * @author Bdong  
- * @version   
- *       1.0, 2016年9月25日 下午8:31:10
+ * This class is used for ...
+ *
+ * @author Bdong
+ * @version 1.0, 2016年9月25日 下午8:31:10
  */
 public class LoginBad {
     private int Count;

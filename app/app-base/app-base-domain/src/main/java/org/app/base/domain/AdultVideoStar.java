@@ -6,11 +6,11 @@
  * and shall use it only in accordance with the terms of the agreements   
  * you entered into with Founder.   
  *   
- */     
+ */
 package org.app.base.domain;
 
 import java.util.Date;
-    
+
 public class AdultVideoStar {
     private Integer id;
     //中文名

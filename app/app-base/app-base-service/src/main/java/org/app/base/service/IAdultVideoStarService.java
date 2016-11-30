@@ -6,7 +6,7 @@
  * and shall use it only in accordance with the terms of the agreements   
  * you entered into with Founder.   
  *   
- */     
+ */
 package org.app.base.service;
 
 
@@ -15,8 +15,8 @@ import org.app.base.domain.AdultVideoStar;
 import java.util.List;
 
 public interface IAdultVideoStarService {
-	public AdultVideoStar selectByPrimaryKey(Integer id);
-	
-	List<AdultVideoStar> selectAll();
+    public AdultVideoStar selectByPrimaryKey(Integer id);
+
+    List<AdultVideoStar> selectAll();
 }
   

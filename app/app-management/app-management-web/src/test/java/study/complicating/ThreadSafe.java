@@ -6,16 +6,17 @@
  * and shall use it only in accordance with the terms of the agreements   
  * you entered into with Founder.   
  *   
- */     
-package org.app.base.common.annotations;    
+ */
+package study.complicating;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-    
+
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
-public @interface GuardedBy {
-	String value();
+public @interface ThreadSafe {
+
+    //线程安全的注解
 }
   

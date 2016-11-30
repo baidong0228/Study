@@ -6,17 +6,17 @@
  * and shall use it only in accordance with the terms of the agreements   
  * you entered into with Founder.   
  *   
- */     
-package org.app.base.common.study.thread.one;    
-    
+ */
+package org.app.base.common.study.thread.one;
+
 /**
  * 接口
- * This class is used for ...   
- * @author Bdong  
- * @version   
- *       1.0, 2016年7月26日 下午9:51:33
+ * This class is used for ...
+ *
+ * @author Bdong
+ * @version 1.0, 2016年7月26日 下午9:51:33
  */
 public interface AdultVideo {
-	public void warning();
+    public void warning();
 }
   

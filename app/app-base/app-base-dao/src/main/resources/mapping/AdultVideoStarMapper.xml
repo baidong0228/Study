@@ -1,133 +1,133 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="org.app.base.dao.IAdultVideoStarDao" >
-  <resultMap id="BaseResultMap" type="org.app.base.domain.AdultVideoStar" >
-    <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="chineseName" property="chinesename" jdbcType="VARCHAR" />
-    <result column="englishName" property="englishname" jdbcType="VARCHAR" />
-    <result column="birthday" property="birthday" jdbcType="TIMESTAMP" />
-    <result column="height" property="height" jdbcType="INTEGER" />
-    <result column="measurements" property="measurements" jdbcType="VARCHAR" />
-    <result column="cup" property="cup" jdbcType="VARCHAR" />
-    <result column="mosaic" property="mosaic" jdbcType="VARCHAR" />
-  </resultMap>
-  <sql id="Base_Column_List" >
-    id, chineseName, englishName, birthday, height, measurements, cup, mosaic
-  </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
-    <include refid="Base_Column_List" />
-    from adult_video_star 
-    where id = #{id,jdbcType=INTEGER}
-  </select>
-  <select id="selectAll" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from adult_video_star 
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from adult_video_star
-    where id = #{id,jdbcType=INTEGER}
-  </delete>
-  <insert id="insert" parameterType="org.app.base.domain.AdultVideoStar" >
-    insert into adult_video_star (id, chineseName, englishName, 
-      birthday, height, measurements, 
-      cup, mosaic)
-    values (#{id,jdbcType=INTEGER}, #{chinesename,jdbcType=VARCHAR}, #{englishname,jdbcType=VARCHAR}, 
-      #{birthday,jdbcType=TIMESTAMP}, #{height,jdbcType=INTEGER}, #{measurements,jdbcType=VARCHAR}, 
-      #{cup,jdbcType=VARCHAR}, #{mosaic,jdbcType=VARCHAR})
-  </insert>
-  <insert id="insertSelective" parameterType="org.app.base.domain.AdultVideoStar" >
-    insert into adult_video_star
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        id,
-      </if>
-      <if test="chinesename != null" >
-        chineseName,
-      </if>
-      <if test="englishname != null" >
-        englishName,
-      </if>
-      <if test="birthday != null" >
-        birthday,
-      </if>
-      <if test="height != null" >
-        height,
-      </if>
-      <if test="measurements != null" >
-        measurements,
-      </if>
-      <if test="cup != null" >
-        cup,
-      </if>
-      <if test="mosaic != null" >
-        mosaic,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        #{id,jdbcType=INTEGER},
-      </if>
-      <if test="chinesename != null" >
-        #{chinesename,jdbcType=VARCHAR},
-      </if>
-      <if test="englishname != null" >
-        #{englishname,jdbcType=VARCHAR},
-      </if>
-      <if test="birthday != null" >
-        #{birthday,jdbcType=TIMESTAMP},
-      </if>
-      <if test="height != null" >
-        #{height,jdbcType=INTEGER},
-      </if>
-      <if test="measurements != null" >
-        #{measurements,jdbcType=VARCHAR},
-      </if>
-      <if test="cup != null" >
-        #{cup,jdbcType=VARCHAR},
-      </if>
-      <if test="mosaic != null" >
-        #{mosaic,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="org.app.base.domain.AdultVideoStar" >
-    update adult_video_star
-    <set >
-      <if test="chinesename != null" >
-        chineseName = #{chinesename,jdbcType=VARCHAR},
-      </if>
-      <if test="englishname != null" >
+<mapper namespace="org.app.base.dao.IAdultVideoStarDao">
+    <resultMap id="BaseResultMap" type="org.app.base.domain.AdultVideoStar">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="chineseName" property="chinesename" jdbcType="VARCHAR"/>
+        <result column="englishName" property="englishname" jdbcType="VARCHAR"/>
+        <result column="birthday" property="birthday" jdbcType="TIMESTAMP"/>
+        <result column="height" property="height" jdbcType="INTEGER"/>
+        <result column="measurements" property="measurements" jdbcType="VARCHAR"/>
+        <result column="cup" property="cup" jdbcType="VARCHAR"/>
+        <result column="mosaic" property="mosaic" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, chineseName, englishName, birthday, height, measurements, cup, mosaic
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from adult_video_star
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <select id="selectAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from adult_video_star
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        delete from adult_video_star
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" parameterType="org.app.base.domain.AdultVideoStar">
+        insert into adult_video_star (id, chineseName, englishName,
+        birthday, height, measurements,
+        cup, mosaic)
+        values (#{id,jdbcType=INTEGER}, #{chinesename,jdbcType=VARCHAR}, #{englishname,jdbcType=VARCHAR},
+        #{birthday,jdbcType=TIMESTAMP}, #{height,jdbcType=INTEGER}, #{measurements,jdbcType=VARCHAR},
+        #{cup,jdbcType=VARCHAR}, #{mosaic,jdbcType=VARCHAR})
+    </insert>
+    <insert id="insertSelective" parameterType="org.app.base.domain.AdultVideoStar">
+        insert into adult_video_star
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="chinesename != null">
+                chineseName,
+            </if>
+            <if test="englishname != null">
+                englishName,
+            </if>
+            <if test="birthday != null">
+                birthday,
+            </if>
+            <if test="height != null">
+                height,
+            </if>
+            <if test="measurements != null">
+                measurements,
+            </if>
+            <if test="cup != null">
+                cup,
+            </if>
+            <if test="mosaic != null">
+                mosaic,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="chinesename != null">
+                #{chinesename,jdbcType=VARCHAR},
+            </if>
+            <if test="englishname != null">
+                #{englishname,jdbcType=VARCHAR},
+            </if>
+            <if test="birthday != null">
+                #{birthday,jdbcType=TIMESTAMP},
+            </if>
+            <if test="height != null">
+                #{height,jdbcType=INTEGER},
+            </if>
+            <if test="measurements != null">
+                #{measurements,jdbcType=VARCHAR},
+            </if>
+            <if test="cup != null">
+                #{cup,jdbcType=VARCHAR},
+            </if>
+            <if test="mosaic != null">
+                #{mosaic,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="org.app.base.domain.AdultVideoStar">
+        update adult_video_star
+        <set>
+            <if test="chinesename != null">
+                chineseName = #{chinesename,jdbcType=VARCHAR},
+            </if>
+            <if test="englishname != null">
+                englishName = #{englishname,jdbcType=VARCHAR},
+            </if>
+            <if test="birthday != null">
+                birthday = #{birthday,jdbcType=TIMESTAMP},
+            </if>
+            <if test="height != null">
+                height = #{height,jdbcType=INTEGER},
+            </if>
+            <if test="measurements != null">
+                measurements = #{measurements,jdbcType=VARCHAR},
+            </if>
+            <if test="cup != null">
+                cup = #{cup,jdbcType=VARCHAR},
+            </if>
+            <if test="mosaic != null">
+                mosaic = #{mosaic,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="org.app.base.domain.AdultVideoStar">
+        update adult_video_star
+        set chineseName = #{chinesename,jdbcType=VARCHAR},
         englishName = #{englishname,jdbcType=VARCHAR},
-      </if>
-      <if test="birthday != null" >
         birthday = #{birthday,jdbcType=TIMESTAMP},
-      </if>
-      <if test="height != null" >
         height = #{height,jdbcType=INTEGER},
-      </if>
-      <if test="measurements != null" >
         measurements = #{measurements,jdbcType=VARCHAR},
-      </if>
-      <if test="cup != null" >
         cup = #{cup,jdbcType=VARCHAR},
-      </if>
-      <if test="mosaic != null" >
-        mosaic = #{mosaic,jdbcType=VARCHAR},
-      </if>
-    </set>
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="org.app.base.domain.AdultVideoStar" >
-    update adult_video_star
-    set chineseName = #{chinesename,jdbcType=VARCHAR},
-      englishName = #{englishname,jdbcType=VARCHAR},
-      birthday = #{birthday,jdbcType=TIMESTAMP},
-      height = #{height,jdbcType=INTEGER},
-      measurements = #{measurements,jdbcType=VARCHAR},
-      cup = #{cup,jdbcType=VARCHAR},
-      mosaic = #{mosaic,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=INTEGER}
-  </update>
+        mosaic = #{mosaic,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
 </mapper>

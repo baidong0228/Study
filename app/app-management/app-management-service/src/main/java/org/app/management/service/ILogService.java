@@ -6,13 +6,13 @@
  * and shall use it only in accordance with the terms of the agreements   
  * you entered into with Founder.   
  *   
- */     
+ */
 package org.app.management.service;
 
 
 import org.app.base.domain.Log;
 
 public interface ILogService {
-	int insertSelective(Log record);
+    int insertSelective(Log record);
 }
   

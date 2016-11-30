@@ -133,12 +133,12 @@ public class LoginUtils {
         return passNum >= 3;
     }
 
-	public static Map<String, LoginBad> getUserbadloginmap() {
-		return userBadLoginMap;
-	}
+    public static Map<String, LoginBad> getUserbadloginmap() {
+        return userBadLoginMap;
+    }
 
-	public static Map<String, LoginBad> getIpbadloginmap() {
-		return ipBadLoginMap;
-	}
+    public static Map<String, LoginBad> getIpbadloginmap() {
+        return ipBadLoginMap;
+    }
 
 }

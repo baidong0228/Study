@@ -1,11 +1,11 @@
 package org.app.base.common.utils;
 
 
-
 public class NumberUtil {
 
     /**
      * 解析解析为int 如不能解析默认为0
+     *
      * @param obj 解析值
      * @return 返回结果
      */
@@ -16,7 +16,8 @@ public class NumberUtil {
 
     /**
      * 解析解析为int
-     * @param obj 解析值
+     *
+     * @param obj          解析值
      * @param defaultValue 不能解析时的默认值
      * @return 返回结果
      */

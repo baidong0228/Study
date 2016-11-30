@@ -6,7 +6,7 @@
  * and shall use it only in accordance with the terms of the agreements   
  * you entered into with Founder.   
  *   
- */     
+ */
 package org.app.base.service.impl;
 
 import org.app.base.dao.IUserDao;
@@ -20,23 +20,23 @@ import javax.annotation.Resource;
 
 @Service("userServiceImpl")
 public class UserServiceImpl implements IUserService {
-	@Resource(name="userDao") 
+    @Resource(name = "userDao")
     private IUserDao userDao;
-	
-	public User selectByPrimaryKey(String id) {
-		// TODO Auto-generated method stub
-		return userDao.selectByPrimaryKey(id);
-	}
 
-	public UserVO selectByName(String username) {
-		// TODO Auto-generated method stub
-		return userDao.selectByName(username);
-	}
+    public User selectByPrimaryKey(String id) {
+        // TODO Auto-generated method stub
+        return userDao.selectByPrimaryKey(id);
+    }
 
-	public int updateByPrimaryKeySelective(User record) {
-		// TODO Auto-generated method stub
-		return userDao.updateByPrimaryKeySelective(record);
-	}
+    public UserVO selectByName(String username) {
+        // TODO Auto-generated method stub
+        return userDao.selectByName(username);
+    }
+
+    public int updateByPrimaryKeySelective(User record) {
+        // TODO Auto-generated method stub
+        return userDao.updateByPrimaryKeySelective(record);
+    }
 
 }
   

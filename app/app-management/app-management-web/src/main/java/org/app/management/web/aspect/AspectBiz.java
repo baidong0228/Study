@@ -6,16 +6,16 @@
  * and shall use it only in accordance with the terms of the agreements   
  * you entered into with Founder.   
  *   
- */     
-package org.app.management.web.aspect;    
+ */
+package org.app.management.web.aspect;
 
 import org.apache.log4j.Logger;
-    
-public class AspectBiz {
-	private static Logger logger = Logger.getLogger("AspectBiz");
 
-	public void biz(){
-		logger.info("AspectBiz biz()");
-	}
+public class AspectBiz {
+    private static Logger logger = Logger.getLogger("AspectBiz");
+
+    public void biz() {
+        logger.info("AspectBiz biz()");
+    }
 }
   

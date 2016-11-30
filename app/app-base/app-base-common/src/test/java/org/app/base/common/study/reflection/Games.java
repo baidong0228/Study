@@ -6,10 +6,10 @@
  * and shall use it only in accordance with the terms of the agreements   
  * you entered into with Founder.   
  *   
- */     
-package org.app.base.common.study.reflection;    
-    
+ */
+package org.app.base.common.study.reflection;
+
 public interface Games {
-	 public abstract void play();
+    public abstract void play();
 }
   

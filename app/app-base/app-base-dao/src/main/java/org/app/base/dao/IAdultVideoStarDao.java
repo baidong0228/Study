@@ -13,7 +13,7 @@ public interface IAdultVideoStarDao {
     int insertSelective(AdultVideoStar record);
 
     AdultVideoStar selectByPrimaryKey(Integer id);
-    
+
     List<AdultVideoStar> selectAll();
 
     int updateByPrimaryKeySelective(AdultVideoStar record);

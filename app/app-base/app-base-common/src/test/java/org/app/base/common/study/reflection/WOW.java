@@ -6,15 +6,15 @@
  * and shall use it only in accordance with the terms of the agreements   
  * you entered into with Founder.   
  *   
- */     
-package org.app.base.common.study.reflection;    
+ */
+package org.app.base.common.study.reflection;
 
-    
-public class WOW implements Games{
 
-	public void play() {
-		 System.out.println("Lok tar o'gar！");
-	}
+public class WOW implements Games {
+
+    public void play() {
+        System.out.println("Lok tar o'gar！");
+    }
 
 }
   

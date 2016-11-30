@@ -6,19 +6,20 @@
  * and shall use it only in accordance with the terms of the agreements   
  * you entered into with Founder.   
  *   
- */     
+ */
 package org.app.base.service;
 
 
 import org.app.base.domain.Group;
 
 public interface IGroupService {
-	/**
-	 * 根据Id查询
-	 * @param id
-	 * @return  
-	 * @author Bdong
-	 */
-	Group selectByPrimaryKey(String id);
+    /**
+     * 根据Id查询
+     *
+     * @param id
+     * @return
+     * @author Bdong
+     */
+    Group selectByPrimaryKey(String id);
 }
   
